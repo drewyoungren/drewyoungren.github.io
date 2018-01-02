@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Hank Quinlan made me launch this site."
 date: 2018-01-01
 ---

@@ -1,5 +1,7 @@
-title: dcy
-description: Personal webpage for Drew C Youngren.
+title: Drew C Youngren
+# description: 
 show_downloads: false
-google_analytics:
+# google_analytics:
 theme: jekyll-theme-slate
+
+permalink: /blog/:year/:month/:day/:title

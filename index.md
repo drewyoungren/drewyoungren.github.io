@@ -5,10 +5,11 @@ author_profile: true
 	
 
 
-## _Lecturer in Applied Mathematics_ 
+![Profile pic]({{ "/assets/images/dcy.jpg" | absolute_url}}){: .callout} 
+### _Lecturer in Applied Mathematics_ 
 
-### Department of Applied Physics and Applied Mathematics
-### Columbia University
+#### Department of Applied Physics and Applied Mathematics
+#### Columbia University
 
 Mailing address
 :	<address>500 W 120th St<br />200 S. W. Mudd, MC 4701<br />New York, NY 10027  </address>
