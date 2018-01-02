@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  # - title: "Sample Page"
+  #   url: /sample-page/
+  - title: "CV"
+    url: /cv/
+  - title: "Blog"
+    url: /blog/
+  # - title: "Sitemap"
+  #   url: /sitemap/
