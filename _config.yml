@@ -10,13 +10,13 @@ minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "Put Another Way"
 title_separator          : "-"
 name                     : "Drew C Youngren"
 description              : "A personal website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://drewyoungren.github.io" # the base hostname & protocol for your site e.g. "https://drewyoungren.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "drewyoungren/drewyoungren.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -86,9 +86,9 @@ analytics:
 author:
   name             : "Drew C Youngren"
   avatar           : "/assets/images/dcy.jpg"
-  bio              : "I am not Hank Quinlan."
+  bio              : "Mathematics teacher."
   location         : "NYC"
-  email            :
+  email            : dcy2@columbia.edu
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -97,9 +97,9 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
-  gitlab           : "drewyoungren"
-  google_plus      :
+  github           : "drewyoungren"
+  gitlab           : 
+  google_plus      : "drew.youngren"
   keybase          :
   instagram        :
   lastfm           :

@@ -2,10 +2,10 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Sample Page"
-    url: /sample-page/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  # - title: "Sample Page"
+  #   url: /sample-page/
+  - title: "CV"
+    url: /cv/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
