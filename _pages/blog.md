@@ -1,5 +1,5 @@
 ---
-# title: "Drew Youngren's Blog"
+title: "A Blog"
 layout: blog
 permalink: /blog/
 author_profile: true
