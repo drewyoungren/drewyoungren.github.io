@@ -1,6 +1,6 @@
 ---
 title: "About"
-layout: single
+layout: default
 permalink: /about/
 date: 2018-01-01
 ---
