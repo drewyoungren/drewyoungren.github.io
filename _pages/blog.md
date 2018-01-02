@@ -1,6 +1,7 @@
 ---
-title: "Drew Youngren's Blog"
+# title: "Drew Youngren's Blog"
 layout: blog
 permalink: /blog/
+author_profile: true
 # date: 2018-01-01
 ---

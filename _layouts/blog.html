@@ -9,3 +9,7 @@ layout: archive
 {% endfor %}
 
 {% include paginator.html %}
+
+{% for post in site.posts %}
+  {{ post.url }}
+{% endfor %}
