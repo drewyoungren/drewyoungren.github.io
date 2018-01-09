@@ -4,6 +4,7 @@ title: Multivariable Calculus for Engineers and Applied Scientists
 subtitle: APMA E2000
 semester: 2018_Spring
 term: Spring
+permalink: "/teaching/2018Spring/APMA_E2000/"
 date: 2018-01-08
 ---
 
@@ -18,4 +19,5 @@ date: 2018-01-08
 
 ### Homework
 
-  * [Homework 1](Homework1)
+  * [Homework 1](Homework1) [.ipynb](https://nbviewer.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework1.ipynb)
+  
