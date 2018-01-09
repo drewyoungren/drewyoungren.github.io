@@ -18,4 +18,5 @@ date: 2018-01-08
 
 ### Homework
 
-  * [Homework 1](Homework1)
+  * [Homework 1](Homework1) [.ipynb](https://nbviewer.org/url/{{ "Homework1.ipynb" | absolute_url | remove_first: "http://" | remove_first: "https://" }})
+  
