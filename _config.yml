@@ -8,5 +8,5 @@ permalink: /blog/:year/:month/:day/:title
 collections:
   teaching:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:path
 
