@@ -118,7 +118,7 @@ Do It Live
 
 ## Buttons
 
-Make any link standout more when applying the `.btn` class.
+Make any [link](https://github.com/  .btn) standout more when applying the `.btn` class.
 
 ## Notices
 
