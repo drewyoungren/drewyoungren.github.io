@@ -14,7 +14,7 @@ date: 2018-01-08
 
 ### Syllabus
 
-  * [PDF version](syllabus.pdf)
+  * [PDF version]({{ "/assets/docs/syllabus.pdf" | absolute_url }})
   * [Course schedule](https://docs.google.com/spreadsheets/d/1nFewJNfoFeABClZVAZHIfE34L_vIn5Y07PEZRZPeUYk/edit?usp=sharing) (Google Sheets)
 
 ### Homework
