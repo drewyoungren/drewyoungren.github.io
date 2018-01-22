@@ -15,11 +15,18 @@
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
           processEscapes: true
+      },
+      TeX: {
+        Macros: {
+          RR: "\\mathbb{R}",
+          bold: ["{\\bf #1}",1]
+          vec: "\\mathbf"
         }
+      }
       });
     </script>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML'></script>
     {% endif %}
     
 {% seo %}
