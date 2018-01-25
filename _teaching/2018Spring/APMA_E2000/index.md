@@ -19,6 +19,6 @@ date: 2018-01-08
 
 ### Homework
 
-  * [Homework 1](Homework1) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework1.ipynb)
+  * [Homework 1](Homework1) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework1.ipynb) [solution](Homework1-sol)
   
   * [Homework 2](Homework2) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework2.ipynb)
