@@ -11815,13 +11815,18 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>2.&nbsp;&nbsp; 
-  Recall that a "hill" can be represented by the graph of the function $$ f(x,y) = e^{-(x^2+y^2)}$$ &lt;img src="hill.png" alt="A hill" width = "33%"&gt;</p>
+  Recall that a "hill" can be represented by the graph of the function $$ f(x,y) = e^{-(x^2+y^2)}$$ <img src="hill.png" alt="A hill"></p>
 <p>For each of the following "landscapes" find a function who graph resembles the picture in questions. 
   <p>Try to capture the features but do not worry about an exact match. Use transformations of the function above and experiment with different forms. All pictures were rendered in <i>Mathematica</i> with the following code, where <code>####</code> is the formula for the function in terms of $x$ and $y$.</p></p>
 <blockquote><code>Plot3D[ #### ,{x,-5,5},{y,-5,5},PlotRange->Full]</code></blockquote><ul>
-<li>"Three peaks of varying widths and heights" &lt;img src="threepeaks.png" alt="3 peaks" width = "33%"&gt;<i>Hint: Use a sum of transformations of the "hill" above.</i></li>
-<li>"A mountain range extendinging infinitely in one direction."&lt;img src="mtrange.png" alt="A hill" width = "33%"&gt;<i>Do not use and infinite sum here. Use a periodic function.</i></li>
-<li>"A canyon." &lt;img src="canyon.png" alt="A hill" width = "33%"&gt;</li>
+<li>"Three peaks of varying widths and heights" 
+<img src="threepeaks.png" alt="3 peaks">
+<i>Hint: Use a sum of transformations of the "hill" above.</i></li>
+<li>"A mountain range extendinging infinitely in one direction."
+<img src="mtrange.png" alt="A range">
+<i>Do not use and infinite sum here. Use a periodic function.</i></li>
+<li>"A canyon." 
+<img src="canyon.png" alt="A canyon"></li>
 <li>"A volcano with crater." <i>Use your imagination</i></li>
 </ul>
 
@@ -11835,13 +11840,12 @@ $$</p>
 <p>3.</p>
 <ul>
 <li><p>Use the squeeze theorem to evaluate
-$$ \lim_{(x,y) \rightarrow (0, 0)} \tan(x) \ \sin\left(\frac{1}{|x| + |y|}\right).$$</p>
+$$ \lim_{(x,y) \to (0, 0)} \tan(x) \ \sin\left(\frac{1}{|x| + |y|}\right).$$</p>
 </li>
 <li><p>Consider the function
-\[ f(x, y) = \left{ \begin{array}{l c l}\frac{x^ay^b}{x^2 + y^{2}} &amp; &amp; (x, y) \neq (0, 0)\~\</p>
-
-<pre><code>    0   &amp; &amp; (x, y) = (0, 0)\end{array}\right.\\]
-</code></pre>
+$$f(x,y) = \begin{cases} \frac{x^ay^b}{x^2 + y^{2}} &amp; \text{ if } (x,y)\ne (0,0) \\
+  0, &amp; \text{ if } (x,y)=(0,0) \end{cases}
+  $$</p>
 <p>where $a, b$ are nonnegative integers.</p>
 <p>For what values of $a$ and $b$ is the function $f$ continuous at $(0, 0)$? (Try some concrete examples like $a=1,b=5$ or $a=0,b=1$ first.)</p>
 </li>
