@@ -11911,6 +11911,71 @@ $$ As long as the exponent on the right is positive (i.e., $a+b \ge 3$), this li
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>4. The hyperbolic secant function is defined as $$ \text{sech}(x) = \frac{2}{e^x+e^{-x}}$$</p>
 <p>Show that $$u(x,t) = \sqrt{6}\text{sech}(x-t) $$ is a solution to the modified KdV equation $$ u_t +u^2u_x+u_{xxx} =0. $$</p>
+<p>First, since we know we'll need 3 derivatives of sech, let's compute them in 1 dimenion (I'll use $y$ as a variable to not confuse it with $x$ and $t$, but clearly it doesn't matter.)</p>
+<p>Secondly, to keep our page from getting to be too big a mess, we'll make the following observation. Define</p>
+<p>$$ f(y) = e^y + e^{-y} \quad g(y) = e^y - e^{-y} $$</p>
+<p>Then, we have the nice relation that $f'(y) = g(y)$ and $g'(y) = f(y)$.</p>
+<p>\begin{align*}
+\text{sech}(y) &amp;= \frac{2}{f(y)} \\
+\text{sech}'(y) &amp;= - \frac{2g(y)}{f(y)^2} \\ 
+\text{sech}''(t) &amp;= -2\frac{f(y)^3 - g(y)2f(y)g(y)}{f(y)^4} \\ 
+\ &amp;= -2\frac{1}{f(y)} + 4\frac{g(y)^2}{f(y)^3} \\ 
+\end{align*}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>\begin{align*}
+\text{sech}(y) &amp;= \frac{2}{f(y)} \\
+\text{sech}'(y) &amp;= - \frac{2g(y)}{f(y)^2} \\ 
+\text{sech}''(t) &amp;= -2\frac{f(y)^3 - g(y)2f(y)g(y)}{f(y)^4} \\ 
+\ &amp;= -2\frac{1}{f(y)} + 4\frac{g(y)^2}{f(y)^3} \\ 
+\text{sech}'''(t) &amp;= \frac{2g(y)}{f(y)^2} + 4\frac{2g(y)f(y)f(y)^3 - g(y)^2 3f(y)^2g(y)}{f(y)^6} \\
+\ &amp;= 2\frac{g(y)}{f(y)^2} + 8\frac{g(y)}{f(y)^2} - 12\frac{g(y)^3}{f(y)^4} \\
+\ &amp;= 10\frac{g(y)}{f(y)^2} - 12\frac{g(y)^3}{f(y)^4}
+\end{align*}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we recognize the crucial fact that when computing partial derivatives of $\text{sech}(x-t)$, we have from the chain rule
+\begin{align*}
+\partial_t \text{sech}(x-t) &amp;= - \text{sech}'(x-t) \\
+\partial_x \text{sech}(x-t) &amp;= \text{sech}'(x-t) \\
+\end{align*}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So now we can expand the terms of our PDE in terms of $f$ and $g$ and just recognize that differentiating with respect to $t$ bring a minus sign, but with respect to $x$ does not.
+\begin{align*}
+u_t &amp;= 2\sqrt{6}\frac{g}{f^2} \\
+u^2u_x &amp;= \left( \sqrt{6} \frac{2}{f} \right)^2\left( -\sqrt{6} \frac{2g}{f^2} \right) \\
+\ &amp;= -48\sqrt{6}\frac{g}{f^4} \\
+u_{xxx} &amp;= 10\sqrt{6}\frac{g}{f^2} -12\sqrt{6}\frac{g^3}{f^4} 
+\end{align*}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Eliminate the $\sqrt{6}$ term and put over a common denominator of $f^4$ leaves a numerator of 
+$$ 12g f^2 -48g -12g^3 = 12g(f^2-4-g^2)  = 12g((f+g)(f-g)-4) = 12g((2e^y)(2e^{-y})-4)=0  $$</p>
 
 </div>
 </div>
