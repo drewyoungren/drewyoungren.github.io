@@ -11914,13 +11914,7 @@ $$ As long as the exponent on the right is positive (i.e., $a+b \ge 3$), this li
 <p>First, since we know we'll need 3 derivatives of sech, let's compute them in 1 dimenion (I'll use $y$ as a variable to not confuse it with $x$ and $t$, but clearly it doesn't matter.)</p>
 <p>Secondly, to keep our page from getting to be too big a mess, we'll make the following observation. Define</p>
 <p>$$ f(y) = e^y + e^{-y} \quad g(y) = e^y - e^{-y} $$</p>
-<p>Then, we have the nice relation that $f'(y) = g(y)$ and $g'(y) = f(y)$.</p>
-<p>\begin{align*}
-\text{sech}(y) &amp;= \frac{2}{f(y)} \\
-\text{sech}'(y) &amp;= - \frac{2g(y)}{f(y)^2} \\ 
-\text{sech}''(t) &amp;= -2\frac{f(y)^3 - g(y)2f(y)g(y)}{f(y)^4} \\ 
-\ &amp;= -2\frac{1}{f(y)} + 4\frac{g(y)^2}{f(y)^3} \\ 
-\end{align*}</p>
+<p>Then, we have the nice relation that $f'(y) = g(y)$ and $g'(y) = f(y)$. Thus as our derivatives repeatedly involve quotient and chain rule, we just keep track of coefficients and powers.</p>
 
 </div>
 </div>
