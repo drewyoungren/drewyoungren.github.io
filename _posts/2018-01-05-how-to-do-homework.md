@@ -11,7 +11,7 @@ This post is meant specifically for students in APMA E2000 at Columbia, particul
 
 *Setting up one's workspace of course is of course a matter of personal preference, and you should always do what works. What follows are recommendations that will hopefully make the material 'stick' better.*
 
-Start by obtaining 3 things from you preferred stationery/office supply stroe:
+Start by obtaining 3 things from you preferred stationery/office supply store:
   * A stack of legal pads
   * A ream of printer paper
   * A good pen or pencil (but not too good)
@@ -37,7 +37,7 @@ For example, you are sitting down to do a Calculus II problem set. Take a glance
 
 > *Ah. Representing functions as power series. that's where essentially we write a function $$f(x)$$ as a giant polynomial. It basically comes down to finding coefficients, the numbers in front of* $$x^n$$*'s.* 
 
-Furthermore, set modest goals. "I'm going to work for a solid hour." "I'm going to do two problems." Breaking a homework set into multiple sessions makes it less arduous and necessitates more of that goog "shifting gears" practice.
+Furthermore, set modest goals. "I'm going to work for a solid hour." "I'm going to do two problems." Breaking a homework set into multiple sessions makes it less arduous and necessitates more of that "shifting gears" practice.
 
 ## Do the math
 
@@ -50,11 +50,11 @@ Nevertheless, let's walk through an example.
 > 5. Evaluate the following indefinite integral as a power series.
 > \\[\int \frac{e^x - 1}{x}\,dx \\]
 
-Start by transcribing the pronlem to your scrap paper in your own, informal way. Next, write down the form them answer will take. This gives you a goal to aim for. In more complex problems, it is easy to lose sight of this goal. Keep it boxed on your paper as an easy reference. 
+Start by transcribing the problem to your scrap paper in your own, informal way. Next, write down the form them answer will take. This gives you a goal to aim for. In more complex problems, it is easy to lose sight of this goal. Keep it boxed on your paper as an easy reference. 
 
 ![Scrap Screenshot]({{ "/assets/images/2018-01-05/scr1.png" | absolute_url }}) 
 
-This is **way** neater than most of my scratchwork looks. It almost could be submitted, but note that in working out the power series for $$\frac{e^x-1}{x}$$, I did calculations on top of old work. Do not turn the grader into an archaeologist. They need not scrape back layers to see how you arrived at your conclusion. 
+This is **way** neater than most of my scratch-work looks. It almost could be submitted, but note that in working out the power series for $$\frac{e^x-1}{x}$$, I did calculations on top of old work. Do not turn the grader into an archaeologist. They need not scrape back layers to see how you arrived at your conclusion. 
 
 <h2 id="check"> Check it </h2>
 
