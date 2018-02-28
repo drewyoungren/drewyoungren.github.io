@@ -29,4 +29,6 @@ date: 2018-01-08
 
   * [Homework 5](Homework5) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework5.ipynb) [solution](Homework5-sln)
 
-  * [Homework 6](Homework6) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework6.ipynb) <!-- [solution](Homework6-sn) -->
+  * [Homework 6](Homework6) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework6.ipynb) [solution](Homework6-sn)
+
+  * [Homework 7](Homework7) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework7.ipynb) <!-- [solution](Homework7-solu)-->
