@@ -24,6 +24,22 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+kbd {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background:#EEEEEE none repeat scroll 0 0;
+    border-color:#CCCCCC #AAAAAA #888888 #BBBBBB;
+    border-style:solid;
+    border-width:1px 1px 2px 2px;
+    color:#000000;
+    font-size: 65%;
+    vertical-align: middle;
+    padding:2px 1px;
+    white-space:nowrap;
+}
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
