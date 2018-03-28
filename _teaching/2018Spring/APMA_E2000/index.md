@@ -36,3 +36,5 @@ date: 2018-01-08
   * [Homework 8](Homework8) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework8.ipynb) [solution](Homework8-solution)
 
   * [Homework 9](Homework9) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework9.ipynb) [solution](Homework9-sol)
+  
+  * [Homework 10](Homework10) [.ipynb](https://nbviewer.jupyter.org/url/{{ page.url | absolute_url | remove_first: "http://" | remove_first: "https://" }}Homework10.ipynb) 
