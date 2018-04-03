@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Homework10-sln</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Homework11</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11775,7 +11775,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Homework-10-Solutions">Homework 10 Solutions<a class="anchor-link" href="#Homework-10-Solutions">&#182;</a></h1>
+<h1 id="Homework-11">Homework 11<a class="anchor-link" href="#Homework-11">&#182;</a></h1><h2 id="Due:-April-10,-2018,-8-a.m.">Due: April 10, 2018, 8 a.m.<a class="anchor-link" href="#Due:-April-10,-2018,-8-a.m.">&#182;</a></h2><p>Please give a complete, justified solution to each question below. A single-term answer without explanation will receive no credit.</p>
+<p>Please complete each question on its own sheet of paper (or more if necessary), and upload to <a href="https://gradescope.com/">Gradsescope</a>.</p>
+
 </div>
 </div>
 </div>
@@ -11798,9 +11800,11 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>1. Each vctor field below has the form $\vec F(x,y) = P(x,y)\,\vec i + Q(x,y)\,\vec j$ where $P$ and $Q$ are sepelcted from among the functions $$\{\pm x,\pm y,\pm x^2,\pm y^2,\pm \cos(x),\pm \cos y \}.$$</p>
-<p>For each, find $P$ and $Q$ and briefly describe how you arrived at your conclusion.</p>
-<p><img src="vp10.png" alt="Vector plots"></p>
+<p>1. Compute $\int_C \vec F \cdot d\vec r$, where $C$ is the oriented curve in the figure, and $\vec F$ is the vector field that is constant on each of the three straight segments of $C$:
+        $$ \vec F(x, y) = \left \{ \begin{array}{l c l} x\,\vec i &amp; &amp; \text{on } PQ \\ 
+                                 2x\,\vec i - \vec j &amp; &amp; \text{on } QR \\
+                                 3x\,\vec i + \vec j &amp; &amp; \text{on } RS. \end{array}\right.$$
+        <img src="hw-13-1_13-2-Fig5.png" alt="Polygonal path"></p>
 
 </div>
 </div>
@@ -11809,10 +11813,11 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>a. $x^2\,\vec i + y\,\vec j$. $P$ is always positive and independent of $y$. $Q$ is positive when $y$ is positive and negative when it is negative.</p>
-<p>b. $y\,\vec i - y\,\vec j$. Independent of $x$ overall. Signs determine the rest.</p>
-<p>c. $\cos y\,\vec i - x\,\vec j$ The $\vec i$-component is poitive near the %x%-access and flips sign around $\pm\frac32$ (actually $\pi/2$). The $\vec j$-component varies with the opposite sign of $x$.
-  d. $\cos y\,\vec i +\cos x  \,\vec j$. Check $y=0$ to see oscillation in $\vec j$-component, and $x=0$ to see oscillation in $\vec i$ component.</p>
+<p>2. Suppose $g:\R\to\R$ is a smooth, nonconstant function.</p>
+<ul>
+<li>Show that $g(x)\,\vec i$ is a conservative vector field.</li>
+<li>Then, use the idea of path-independence (i.e., use Theorem 4 from §16.3) to show $g(x)\,\vec j$ is not conservative. (<em>Hint: construct two paths with common endpoints but different line integrals of the vector field.</em>)</li>
+</ul>
 
 </div>
 </div>
@@ -11821,8 +11826,9 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>2. Determine a potential function $f(x,y,z)$ for the following conservative vector field.</p>
-<p>$$ \vec F(x,y,z) = \left(\frac{1}{x}+y z^2-3\right)\,\vec i+\left(x z^2-z \sin (y z)\right)\,\vec j +\left(2 x y z-y \sin (y z)+\frac{1}{z}\right)\,\vec k $$</p>
+<p>3. Let $\vec F = 3x^2 y^2\,\vec i + 2x^3 y\,\vec j$ and let $C$ be the path in the $xy$-plane from $(-1, 1)$ to $(1, 1)$ that consists of the line segment from $(-1, 1)$ to $(0, 0)$ followed by the line segment from $(0, 0)$ to $(1, 1)$.  Evaluate $\displaystyle\int_C \vec F \cdot d\vec r$ in two ways:</p>
+<p>&nbsp;&nbsp;a. Find  parametrizations for the segments that make up $C$, and evaluate $\displaystyle\int_C \vec F \cdot d\vec r$.</p>
+<p>&nbsp;&nbsp;b.Find a potential function $f$ for $\vec F$ and use it to to evaluate $\displaystyle\int_C \vec F \cdot d\vec r$.</p>
 
 </div>
 </div>
@@ -11831,15 +11837,9 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From the3 first component,
-$$f(x,y,z) = \int \left(\frac{1}{x}+y z^2-3\right)dx = \ln |x| + xyz^2 -3x +g(y,z)$$</p>
-<p>Differentiate with repect to $y$ and set equal to second component.</p>
-<p>$$f_y(x,y,z) = xz^2+g_y(y,z) = x z^2-z \sin (y z)$$</p>
-<p>Thus, $$g(y,z) = \int -z \sin (yz) dy = \cos (yz) +h(z)$$.</p>
-<p>Then check the last component.</p>
-<p>$$f_z(x,y,z) = 2xyz -y\sin(yz) +h'(z) = 2 x y z-y \sin (y z)+\frac{1}{z}$$</p>
-<p>Thus, $h(z) = \ln|z| + C$. Finally,</p>
-<p>$$f(x,y,z) = xyz^2 -3x + \cos (yz) +\ln |xz| + C$$</p>
+<p>4. Find a value $c$ such that the work done by a force field $$
+            \vec F (x,y) = \langle 4-x^2y,-xy \rangle 
+        $$ on an object moving along the parabolic path $y=c(1-x^2)$ from $(-1,0)$ to $(1,0)$ is a minimum. Compare the result with the straight line segment ($c = 0$) running between the two points.</p>
 
 </div>
 </div>
@@ -11848,9 +11848,15 @@ $$f(x,y,z) = \int \left(\frac{1}{x}+y z^2-3\right)dx = \ln |x| + xyz^2 -3x +g(y,
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>3. Compute the line integral $ \int_C f \,ds$ (i.e., with respect to arclength) where the curve $C$ is graphed below (oriented counterclockwise) and $$f(x,y) = x^2 + y^2. $$</p>
-<p><img src="con10.png" alt="Contour 1"></p>
-<p>(You may use the interpretation $\int_C f\,ds$ given in class and/or use the formula $$\int_c f\,ds = \int_a^b f(\vec r(t)) |\vec r'(t)|\,dt $$ as explained in §16.2 of the text.)</p>
+<p>5. Use Green's theorem to evaluate each line integral below or explain how it does not apply.</p>
+<ul>
+<li><p>$$\displaystyle\int_C \frac{1}{\sqrt{x^2 + y^2}} \ dx - \frac{1}{\sqrt{x^2 + y^2}} \ dy$$ where $C$ is the unit circle centered at the origin, oriented counterclockwise.</p>
+</li>
+<li><p>$$\displaystyle\int_C (x^2 + y^2) dx + (x^2 + y^2 ) \ dy$$ where $C$ is the boundary of the region bounded by $y = x$, $y = x^2$, $0 \leq x \leq 1$, with counterclockwise orientation.</p>
+</li>
+<li><p>$\displaystyle\int_C \vec F \cdot d\vec r$ where $\vec F = x \vec i + y \vec j$ and $C$ is the line segment from the origin to  the point $(1,1)$.</p>
+</li>
+</ul>
 
 </div>
 </div>
@@ -11859,10 +11865,11 @@ $$f(x,y,z) = \int \left(\frac{1}{x}+y z^2-3\right)dx = \ln |x| + xyz^2 -3x +g(y,
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We do the integral in two pieces. First, the arc can be parametrized with $\vec r(t) = 2\cos t\,\vec i + 2 \sin t\,\vec j$ for $0 \leq t \leq \pi$. Thus $|\vec r'(t)| = 2$. So we integrate $$\int_0^\pi \left(4\cos^2 t+4sin^2 t\right)2dt = 8\pi.$$</p>
-<p>Next, the bottom part can be parametrized simply by $\vec q (t) = t\,\vec i$ for $-2\leq t \leq 2$, and thus $|\vec q'(t)| = |\vec i|=1$. Thus,</p>
-<p>$$\int_{-2}^2 t^2dt = \frac{16}{3}$$</p>
-<p>and the whole line integral is $8\pi + \frac{16}{3}$.</p>
+<p>6.</p>
+<p>&nbsp;&nbsp;a. Show that for the vector field $\vec F(x,y) = \frac12 \langle -y,x$, the line integral $\oint \vec F\cdot d\vec r$ over a simple, closed curve $C$ is the area enclosed by $C$.</p>
+<p>&nbsp;&nbsp;b. Use part (a) to compute the area enclosed by one "leaf" of the trefoil given in polar coordinates by $r=\sin(3\theta)$ for $0\le \theta \le \pi$.
+    <img src="tref.png" alt="Trefoil"></p>
+<p>(<em>You must first parametrize this curve. The integrand looks awful at one point but simplifies greatly.</em>)</p>
 
 </div>
 </div>
