@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Homework12-soltn</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Homework12-soltn</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11726,7 +11699,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11722,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11771,7 +11746,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11779,23 +11755,24 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$$
+$$
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\pa}{\partial}
 \newcommand{\dydx}{\frac{dy}{dx}}
 \newcommand{\proj}{\textrm{proj}}
 % For boldface vectors:
 \renewcommand{\vec}[1]{\mathbf{#1}}
-$$</p>
-
+$$
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11805,12 +11782,13 @@ $$</p>
 <p><img src="hw-13-5-fig2.png" alt="VF2"></p>
 <p>The horizontal component is not changing as $x$ changes, so $P_x=0$. $Q=0$ everywhere, so of course $Q_y =0$. This field has divergence 0.</p>
 <p><img src="hw-13-5-fig3.png" alt="VF3"></p>
-<p>The horizontal component is 0 everywhere. At the point labeled, the vertical component is decreasing (getting more negative) as $y$ increases. Thus $P_x + Q_y = 0 +Q_y &lt; 0$.</p>
+<p>The horizontal component is 0 everywhere. At the point labeled, the vertical component is decreasing (getting more negative) as $y$ increases. Thus $P_x + Q_y = 0 +Q_y < 0$.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11822,7 +11800,7 @@ $$</p>
 <li>$\displaystyle \nabla\times\nabla f$</li>
 </ul>
 <p>The curl of the gradient of a scalar field is a vector field. Further, 
-$$\nabla \times\nabla f = \begin{vmatrix} \vec i &amp; \vec j &amp; \vec k \\ \pa_x &amp; \pa_y &amp; \pa_z \\ f_x &amp; f_y &amp; f_z \end{vmatrix} = (f_{zy}-f_{yz})\vec i + (f_{xz}-f_{zx})\vec j + (f_{yx}-f_{xy})\vec k = \vec 0$$</p>
+$$\nabla \times\nabla f = \begin{vmatrix} \vec i & \vec j & \vec k \\ \pa_x & \pa_y & \pa_z \\ f_x & f_y & f_z \end{vmatrix} = (f_{zy}-f_{yz})\vec i + (f_{xz}-f_{zx})\vec j + (f_{yx}-f_{xy})\vec k = \vec 0$$</p>
 <ul>
 <li>$\displaystyle \nabla(\nabla\times F)$</li>
 </ul>
@@ -11831,22 +11809,21 @@ $$\nabla \times\nabla f = \begin{vmatrix} \vec i &amp; \vec j &amp; \vec k \\ \p
 <li>$\displaystyle \nabla\cdot(\nabla\times F)$</li>
 </ul>
 <p>Divergence of a curl is a scalar field. In fact, it is identically 0.</p>
-<p>$$\nabla\cdot(\nabla \times \vec F) = \pa_x(R_y-Q_z) + \pa_y(P_z - R_x) + \pa_z(Q_x-P_y) = R_{yx}-R_{xy} -Q_{zy} + Q_{yz} +P_{zy} - P_{yz} = 0$$</p>
-<ul>
+$$\nabla\cdot(\nabla \times \vec F) = \pa_x(R_y-Q_z) + \pa_y(P_z - R_x) + \pa_z(Q_x-P_y) = R_{yx}-R_{xy} -Q_{zy} + Q_{yz} +P_{zy} - P_{yz} = 0$$<ul>
 <li>$\displaystyle \nabla\cdot\nabla f$</li>
 </ul>
 <p>The divergence of the gradient (aka the Laplacian) of a scalar field is a scalar field.</p>
-<p>$$\nabla\cdot\nabla f = f_{xx}+f_{yy}+f_{zz} $$</p>
-<p>This is not necessarily 0. Take, for example, $f(x,y) = x^2 + y^2$. Then $$f_{xx} + f_{yy} = 2 +2 = 4.$$</p>
+$$\nabla\cdot\nabla f = f_{xx}+f_{yy}+f_{zz} $$<p>This is not necessarily 0. Take, for example, $f(x,y) = x^2 + y^2$. Then $$f_{xx} + f_{yy} = 2 +2 = 4.$$</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>3. A <em>torus of revolution</em> (doughnut) is obtained by rotating a circle $C$ in the $xz$ plane about the $z$-axis.  Suppose that $C$ has a radius $r$ and center $(R, 0, 0)$. Here, $R&gt;r$.</p>
+<p>3. A <em>torus of revolution</em> (doughnut) is obtained by rotating a circle $C$ in the $xz$ plane about the $z$-axis.  Suppose that $C$ has a radius $r$ and center $(R, 0, 0)$. Here, $R>r$.</p>
 <ul>
 <li>Find a parametrization $\vec r(u, v)$ of the torus.  Specify the set $D$ in which $(u, v)$ must lie.</li>
 </ul>
@@ -11859,46 +11836,49 @@ $$\nabla \times\nabla f = \begin{vmatrix} \vec i &amp; \vec j &amp; \vec k \\ \p
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h5><p>First, consider the circle $C$ in the $xz$-plane: $y = 0$ and $(x-R)^2 + z^2 = r^2$.</p>
 <p>$x-R = r \cos u$ and $z = r\sin u$, where $u \in [0, 2\pi]$.  Then, the parametric equations for $(x, z)$ on $C$ is:
-    $$ x = R + r\cos u, ~~ z = r\sin u, ~~~ u \in [0, 2\pi].  $$
+    \[ x = R + r\cos u, ~~ z = r\sin u, <del>~ u \in [0, 2\pi].  \]
 We revolve the circle about the $z$-axis.  Hence,
-    $$ x = (R + r\cos u ) \cos v, ~~ y = (R+r \cos u) \sin v, ~~ z = r \sin u, ~~~ u \in [0,2\pi], ~v \in [0, 2\pi]. $$
+    \[ x = (R + r\cos u ) \cos v, ~~ y = (R+r \cos u) \sin v, ~~ z = r \sin u, ~</del> u \in [0,2\pi], ~v \in [0, 2\pi]. \]
 We can also write this as:
-    $$ \vec r(u, v) = (R + r\cos u ) \cos v \ \vec i + (R + r\cos u ) \sin v \ \vec j + r \sin u \ \vec k,$$
-    $$ (u, v) \in D = [0, 2\pi] \times [0, 2\pi]. $$</p>
+    \[ \vec r(u, v) = (R + r\cos u ) \cos v \ \vec i + (R + r\cos u ) \sin v \ \vec j + r \sin u \ \vec k,\]
+    \[ (u, v) \in D = [0, 2\pi] \times [0, 2\pi]. \]</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We find $|\vec r_u \times \vec r_v|$:
-\begin{eqnarray*}
-\vec r_u(u, v) &amp; = &amp; \langle -r \sin u \cos v, -r\sin u \sin v, r\cos u  \rangle, \\
-\vec r_v(u, v) &amp; = &amp; \langle -(R + r\cos u) \sin v, (R + r\cos u) \cos v, 0 \rangle,\\
+\begin{eqnarray<em>}
+\vec r_u(u, v) &amp; = &amp; \langle -r \sin u \cos v, -r\sin u \sin v, r\cos u  \rangle, \
+\vec r_v(u, v) &amp; = &amp; \langle -(R + r\cos u) \sin v, (R + r\cos u) \cos v, 0 \rangle,\
 \vec r_u \times \vec r_v &amp; = &amp; \langle -r(R+r\cos u) \cos u \cos v, -r(R+r\cos u) \cos u \sin v, -r(R+r\cos u) \sin u\rangle.
-\end{eqnarray*}
+\end{eqnarray</em>}
 Therefore,
-    $$ |\vec r_u \times \vec r_v| = r (R + r\cos u).  $$</p>
+    \[ |\vec r_u \times \vec r_v| = r (R + r\cos u).  \]</p>
 <p>Then, the surface area of the torus is
-\begin{eqnarray*}
-\iint_D |\vec r_u \times \vec r_v| \,dA &amp; = &amp; \int_0^{2\pi} \int_{0}^{2\pi} r (R + r\cos u) \ du \ dv \\
-    &amp; = &amp; \int_0^{2\pi} 2 \pi Rr + r^2\sin(2\pi) - r^2\sin(0) \ dv \\
+\begin{eqnarray<em>}
+\iint_D |\vec r_u \times \vec r_v| \,dA &amp; = &amp; \int<em>0^{2\pi} \int</em>{0}^{2\pi} r (R + r\cos u) \ du \ dv \
+    &amp; = &amp; \int_0^{2\pi} 2 \pi Rr + r^2\sin(2\pi) - r^2\sin(0) \ dv \
     &amp; = &amp; 2\pi r R (2\pi) = 4 \pi^2Rr,
-\end{eqnarray*}
+\end{eqnarray</em>}
 as desired.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11907,42 +11887,46 @@ as desired.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h5><p>This is clearly just the graph of a fiunction of $x$ and $y$, but we can express the bounds in $u$ and $v$ most easily using polar coordinates. 
-$$ \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x \\ y \\ f(x,y) \end{bmatrix} = \begin{bmatrix} u \cos v \\ u \sin v \\ f(u \cos v,y\sin v) \end{bmatrix} = \begin{bmatrix} u \cos v \\ u \sin v \\ \frac{u^2}{4} \end{bmatrix} $$</p>
+\[ \begin{bmatrix} x \ y \ z \end{bmatrix} = \begin{bmatrix} x \ y \ f(x,y) \end{bmatrix} = \begin{bmatrix} u \cos v \ u \sin v \ f(u \cos v,y\sin v) \end{bmatrix} = \begin{bmatrix} u \cos v \ u \sin v \ \frac{u^2}{4} \end{bmatrix} \]</p>
 <p>Solving the last component for the cutoff planes gives</p>
-<p>$$ 2 \leq u \leq 3, ~~~ 0 \leq v \leq 2\pi $$</p>
+<p>\[ 2 \leq u \leq 3, ~~~ 0 \leq v \leq 2\pi \]</p>
 <p>From there, it's plug-and-chug. 
-$$ \vec r_u \times \vec r_v = \begin{vmatrix}\vec i &amp; \vec j &amp; \vec k \\ \cos v &amp; \sin v &amp; u/2 \\ -u \sin v &amp; u \cos v &amp; 0 \end{vmatrix} = -\frac{u^2}{2}\cos v\,\vec i - \frac{u^2}{2}\sin v\,\vec j + u\,\vec k$$</p>
+\[ \vec r_u \times \vec r_v = \begin{vmatrix}\vec i &amp; \vec j &amp; \vec k \ \cos v &amp; \sin v &amp; u/2 \ -u \sin v &amp; u \cos v &amp; 0 \end{vmatrix} = -\frac{u^2}{2}\cos v\,\vec i - \frac{u^2}{2}\sin v\,\vec j + u\,\vec k\]</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Thus the surface area is 
-$$ \iint_D |\vec r_u\times\vec r_v|\,dA = \int_0^{2\pi} \int_2^3 u\sqrt{u^2+1}\,du\,dv$$</p>
+\[ \iint_D |\vec r_u\times\vec r_v|\,dA = \int_0^{2\pi} \int_2^3 u\sqrt{\frac{u^2}{4}+1}\,du\,dv\]</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Substitute $w=u^2 + 1, ~ dw = 2u\,du$ to get 
-$$\int_0^{2\pi} \int_5^{10} \frac12 \sqrt{w} \,dw\,dv = \frac{2\pi}{3}(10^{3/2}-5^{3/2}) \approx 41.8.
-$$</p>
+<p>Substitute $w=u^2/4 + 1, ~ dw = u/2\,du$ to get 
+\[\int_0^{2\pi} \int_2^{13/4} 2 \sqrt{w} \,dw\,dv = \frac{8\pi}{3}(\frac{13^{3/2}}{8}-2^{3/2}) \approx 25.39.
+\]</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11952,19 +11936,21 @@ $$</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="&quot;Solution&quot;">"Solution"<a class="anchor-link" href="#&quot;Solution&quot;">&#182;</a></h5><p>I tried to fit the profile of this object by using a function $f(z)$ as the radius of revolution around the $z$-axis. The parametrization was thus</p>
-<p>$$ \begin{bmatrix} x \\ y \\ z \end{bmatrix}  = \begin{bmatrix} f(u) \cos v \\ f(u) \sin v \\ u \end{bmatrix} $$ for $-7.5 \leq u \leq 7.5, 0 \leq v \leq 2\pi$.</p>
+<p>\[ \begin{bmatrix} x \ y \ z \end{bmatrix}  = \begin{bmatrix} f(u) \cos v \ f(u) \sin v \ u \end{bmatrix} \] for $-7.5 \leq u \leq 7.5, 0 \leq v \leq 2\pi$.</p>
 <p>This leads to a surface area integral $$\int_0^{2\pi}\int_{-7.5}^{7.5} f(u)\sqrt{1+(f'(u))^2}\,du\,dv $$</p>
 <p>I didn't have a lot of luck making this look good. I tried fitting a cubic. <img src="hourglass-cubic.png" alt="Cubic attempt"> which gave a surface area of 362.6 cm$^2$.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11978,8 +11964,4 @@ $$</p>
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
