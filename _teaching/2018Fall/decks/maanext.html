@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAA Metro NExT</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Drew C Youngren">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+		<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+		 <link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css"> 
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--Plotly inclusion-->
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Multivariable Calculus</h1>
+					<h3 class="fragment">
+						for Engineers
+					</h3>
+					<h3 class="fragment"> 
+						&amp; Applied Scientists
+					</h3>
+					<p>
+						<small>Drew C Youngren - <code>dcy2@columbia.edu</code> <br> Columbia University</small>
+					</p>
+				</section>
+				<section>
+					<h1>Bagels</h1>
+					<h3 class="fragment">
+						for Women
+					</h3>
+					<p>
+						<small>Drew C Youngren - <code>dcy2@columbia.edu</code> <br> Columbia University</small>
+					</p>
+				</section>
+
+					<section>
+						<h4>Exercise</h4>
+						<p>
+							Find an equation of the plane through the point $(1,2,-1)$ that contains the line of intersection between the planes $x+y-z=2$ and $2x-y+3z=1$.
+						</p>
+
+						<code class="fragment">
+							RecursionError: maximum recursion depth exceeded
+						</code>
+
+					</section>	
+
+					<section>
+
+						<section>
+							<h4>The subroutines</h4>
+							<pre><code class="hljs" data-trim>
+								void do_math(stuff) {
+									
+									if stuff.resolved() == true:
+									print("QED");
+									else
+									// ...
+									do_math(new_stuff);
+								}
+							</code></pre>
+						</section>
+					<section>
+						<h4>The subroutines</h4>
+						<pre><code class="hljs" data-trim>
+							
+							eqn plane_eqn(pt, vec)
+							vec cross(vec, vec)
+							pt part_solution(eqn[, eqn, ...])
+							vec norm_vec(eqn)
+							
+						</code></pre>
+						<pre class="fragment"><code class="hljs" data-trim>
+							
+							plane_eqn(p,
+							cross(
+								p - part_solution(pl1,pl2),
+								cross(
+									norm_vec(pl1),
+									norm_vec(pl2)
+									)
+									)
+									)
+									
+								</code></pre>
+							</section>
+						</section>
+
+
+
+				<section>
+					<h2>Questions</h2>
+					<ul>
+						<li>Is <code>max_depth</code> uniform across hardware platforms?</li>
+						<li class="fragment">Can <code>max_depth</code> be measured at scale?</li>
+						<li class="fragment">Can we increase it?</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+							// MathJax
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
