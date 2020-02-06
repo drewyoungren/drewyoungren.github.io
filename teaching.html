@@ -4,7 +4,7 @@ permalink: /teaching/index.html
 ---
 
 {% for item in site.teaching %}
-<h2>{{ item.title }}</h2>
+<h3>{{ item.semester }}</h3>
 <p>{{ item.description }}</p>
-<p><a href="{{ item.url }}">{{ item.subtitle }}, {{item.semester }}</a></p>
+<p><a href="{{ item.url }}">{{ item.title }}, {{item.subtitle }}</a></p>
 {% endfor %}

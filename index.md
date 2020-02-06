@@ -21,4 +21,6 @@ Office
 :	287E Mudd
 
 Office hours
-:	M 1100&ndash;1300 (Spring 2018)
+:   Spring 2020
+  -	M 1100&ndash;1300 
+  -	R 1000&ndash;1100 
