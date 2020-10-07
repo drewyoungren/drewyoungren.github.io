@@ -5,7 +5,7 @@ date: 2018-01-02
 math: true
 ---
 
-Ok, $$H_e \vec r^e$$ goes. That was made with this:
+Ok, $$H_e \vec r^e$$ goes. That $was$ made with this:
 
 ```$$H_e \vec r^e$$```
 
@@ -30,6 +30,13 @@ Oooh.
 Of course, display mode shouldn't have an issue. \\[\lim\_{r\to\infty} \oint\_{C_r} \vec F(x,y) \cdot d\vec r \\]
 
 Indeed not.
+
+### Environments
+Needs work.
+
+\\begin{align}
+a & b \\ c & ddf \\
+\\end{align}
 
 ### To escape or not to escape
 
