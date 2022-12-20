@@ -1,0 +1,106 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="clockiclock"></h1>
+    <div id="status"></div>
+  </body>
+
+  <style>
+    body {
+      background-color: #121212;
+    }
+
+    #clockiclock {
+      position: absolute;
+      top:  200px;
+      left: 300px;
+      background-color: #be6800;
+      color: aliceblue;
+      width: 50%;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-size: 6rem;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+
+    #status {
+      position:absolute;
+      right: 0;
+      bottom: 0;
+      color: aliceblue;
+    }
+  </style>
+
+  <script>
+    let id = window.setTimeout(function () {}, 0);
+
+    while (id--) {
+      window.clearTimeout(id); // will do nothing if no timeout with id is present
+    }
+    const el = document.getElementById("clockiclock");
+    const statWindow = document.querySelector("#status");
+
+    let signLR = 1;
+    let signUD = 1;
+
+    function moveClock(){
+      let [h, w] = [window.innerHeight, window.innerWidth];
+      const rect = el.getBoundingClientRect();
+      let [x, y, wh, ww] = [rect.left, rect.top, rect.height, rect.width];
+
+
+      if (x + ww + signLR > w) {
+        el.style.left = (w - ww) + 'px';
+        signLR = -1;
+      } else {if (x + signLR < 0) {
+          el.style.left = 0;
+          signLR = 1
+        } else {
+          statWindow.innerText = x;
+          el.style.left = x + signLR + 'px';
+        }
+      }
+
+      if (y + wh + signUD > h) {
+        el.style.top = 5 + 'px';
+        signUD = -1;
+        el.innerText += '^';
+      } else {if (y + signUD < 0) {
+          el.style.top = 0;
+          signUD = 1
+        el.innerText += 'v';
+        } else {
+          statWindow.innerText = x;
+          el.style.top = y + signUD + 'px';
+        el.innerText += '-';
+        }
+      }
+      statWindow.innerText += " | y" + y + " | wh" + wh + " | h" + h + ' |top' + el.style.top + "\n" ;
+    }
+
+    // setInterval(moveClock, 5000);
+
+    function update() {
+      const d = new Date();
+      // el.innerText = `${String(d.getHours()).padStart(2, "0")}:${String(
+      //   d.getMinutes()
+      // ).padStart(2, "0")}:${String(d.getSeconds()).padStart(2, "0")}`;
+
+      // d.toDateString();
+      el.innerText = d.toLocaleTimeString()
+      setTimeout(update, (Math.PI / 2) * 1000);
+
+      // statWindow.innerText = String(el.offsetLeft ) + " | " + String(window.innerHeight)
+      window.innerHeight
+      // console.log(el.getBoundingClientRect());
+    }
+    setTimeout(update, 0);
+  </script>
+</html>
