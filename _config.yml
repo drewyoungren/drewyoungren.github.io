@@ -1,5 +1,5 @@
 title: Drew C Youngren
-# description: 
+# description:
 show_downloads: false
 # google_analytics:
 theme: jekyll-theme-slate
@@ -9,4 +9,6 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path
-
+  labs:
+    output: true
+    permalink: /:collection/:path
